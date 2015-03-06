@@ -1,1 +1,8 @@
 {{name}}
+
+{{#each email in emails}}
+  {{email.to}}
+  {{email.from}}
+  {{email.subject}}
+  {{email.body}}
+{{/each}}
