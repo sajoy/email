@@ -19,6 +19,8 @@ EmailEtc.NewEmailController = Ember.Controller.extend({
       this.set('from', "");
       this.set('subject', "");
       this.set('body', "");
+
+      this.transitionTo('folder', 2);
     }
   }
 });

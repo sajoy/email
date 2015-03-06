@@ -1,34 +1,36 @@
 {{name}}
 
 <table class="table">
-<tr>
-  <td>
-    From:
-  </td>
-  <td>
-    Subject
-  </td>
-</tr>
-  {{#each email in emails}}
-  <tr>
-    <td>
-      {{email.from}}
-    </td>
-    <td>
-     <a {{action 'toggleDetails' email.id}}> {{email.subject}} </a>
-    </td>
-  </tr>
-
-  {{#if detailsShow}}
+  <thead>
     <tr>
-      <td colspan="2">
-        <div class="emailBody">
-          {{email.body}}
-        </div>
+      <td>
+        From:
+      </td>
+      <td>
+        Subject
       </td>
     </tr>
-  {{/if}}
-
-
+  </thead>
+  <tbody>
+    {{#each email in emails}}
+    <tr>
+      <td>
+        {{email.from}}
+      </td>
+      <td>
+       <a {{action 'toggleDetails' email.id}}> {{email.subject}} </a>
+      </td>
+    </tr>
+    {{#if detailsShow}}
+      <tr>
+        <td colspan="2">
+          <div class="emailBody">
+            <h4>To: {{email.to}}</h4>
+            {{email.body}}
+          </div>
+        </td>
+      </tr>
+    {{/if}}
   {{/each}}
+  </tbody>
 </table>

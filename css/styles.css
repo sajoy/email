@@ -1,4 +1,17 @@
 .emailBody {
-  padding: 15x;
-  margin-bottom: 20px;
+  padding: 30px;
+  /*margin-bottom: 20px;*/
+}
+
+.compose {
+  padding: 20px;
+}
+
+.foldersBar {
+  background: #ddd;
+  padding: 20px;
+}
+
+.foldersBar li {
+  padding: 0;
 }
