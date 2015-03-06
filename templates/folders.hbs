@@ -10,8 +10,9 @@
 <ul>
     {{#each folder in model}}
       <li>
-        <h3>{{folder.name}}</h3>
-        <h6>{{folder.id}}</h6>
+        {{#link-to 'folder' folder.id}}
+          <h3>{{folder.name}}</h3>
+        {{/link-to}}
       </li>
     {{/each}}
 </ul>
