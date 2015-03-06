@@ -1,18 +1,30 @@
-<form>
-  <h4>Add A New Folder</h4>
-  <div class="form-group">
-      {{input type="text" class="form-control" value=name placeholder="folder name"}}
+<div class="col-xs-12">
+  {{#link-to 'newEmail'}}
+    Compose Email
+  {{/link-to}}
+</div>
+<div class="foldersBar col-xs-12">
+  <div class="row">
+    <div class="col-xs-8">
+      <ul class="list-inline">
+        <lh>Folders</lh>
+          {{#each folder in model}}
+            <li>
+              {{#link-to 'folder' folder.id}}
+                <h3>{{folder.name}}</h3>
+              {{/link-to}}
+            </li>
+          {{/each}}
+      </ul>
+    </div>
+    <div class="col-xs-4">
+      <form class="form-inline">
+        {{input type="text" class="form-inline" value=name placeholder="new folder name"}}
+        <button class="btn btn-xs btn-success" {{action 'addFolder'}}>Add</button>
+      </form>
+    </div>
   </div>
-    <button class="btn btn-success" {{action 'addFolder'}}>Add</button>
-</form>
-
-<h4>Folders </h4>
-<ul>
-    {{#each folder in model}}
-      <li>
-        {{#link-to 'folder' folder.id}}
-          <h3>{{folder.name}}</h3>
-        {{/link-to}}
-      </li>
-    {{/each}}
-</ul>
+</div>
+<div class="col-xs-12">
+  {{outlet}}
+</div>

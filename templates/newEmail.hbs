@@ -1,0 +1,7 @@
+<form class="form-inline">
+  {{input type="text" class="form-inline" value=to placeholder="to"}}
+  {{input type="text" class="form-inline" value=from placeholder="from"}}
+  {{input type="text" class="form-inline" value=subject placeholder="subject"}}
+  {{textarea class="form-inline" value=body placeholder="body"}}
+  <button class="btn btn-xs btn-success" {{action 'saveEmail'}}>Add</button>
+</form>
