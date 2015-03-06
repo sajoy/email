@@ -12,8 +12,8 @@ EmailEtc.ApplicationRoute = Ember.Route.extend({
 
     this.store.push('email', {
       id: 1,
-      to: 'you@emailetc.com',
-      from: 'met@emailetc.com',
+      to: 'me@emailetc.com',
+      from: 'you@emailetc.com',
       subject: "new email",
       body: 'hey, this new email client is pretty cool.',
       folder: 1
@@ -21,7 +21,7 @@ EmailEtc.ApplicationRoute = Ember.Route.extend({
 
     this.store.push('email', {
       id: 2,
-      to: 'you@emailetc.com',
+      to: 'me@emailetc.com',
       from: 'google@gmail.com',
       subject: 'come back',
       body: 'We miss you!',
@@ -30,7 +30,7 @@ EmailEtc.ApplicationRoute = Ember.Route.extend({
 
     this.store.push('email', {
       id: 3,
-      to: 'you@emailetc.com',
+      to: 'me@emailetc.com',
       from: 'yahoo@ymail.com',
       subject: 'new offer!',
       body: 'click here for a free pony!',

@@ -3,5 +3,5 @@ EmailEtc.Email = DS.Model.extend({
   from: DS.attr(),
   subject: DS.attr(),
   body: DS.attr(),
-  folder: DS.belongsTo('folder', {async: true})
+  folder: DS.belongsTo('folder', {embedded: 'always'})
 });

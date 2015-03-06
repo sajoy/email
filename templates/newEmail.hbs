@@ -1,7 +1,13 @@
-<form class="form-inline">
-  {{input type="text" class="form-inline" value=to placeholder="to"}}
-  {{input type="text" class="form-inline" value=from placeholder="from"}}
-  {{input type="text" class="form-inline" value=subject placeholder="subject"}}
-  {{textarea class="form-inline" value=body placeholder="body"}}
-  <button class="btn btn-xs btn-success" {{action 'saveEmail'}}>Add</button>
+<form class="newEmail">
+  <label> To:
+    {{input type="text" class="form-control" value=to placeholder="xyz@abc.com"}}
+  </label>
+  <label> From:
+    {{input type="text" class="form-control" value=from placeholder="me@emailetc.com"}}
+  </label>
+  <label> Subject:
+    {{input type="text" class="form-control" value=subject placeholder="subject"}}
+  </label>
+  {{textarea class="form-control" value=body placeholder="Message body"}}
+  <button class="btn btn-xs btn-success" {{action 'saveEmail'}}>Send</button>
 </form>
