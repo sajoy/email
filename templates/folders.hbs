@@ -1,0 +1,17 @@
+<form>
+  <h4>Add A New Folder</h4>
+  <div class="form-group">
+      {{input type="text" class="form-control" value=name placeholder="folder name"}}
+  </div>
+    <button class="btn btn-success" {{action 'addFolder'}}>Add</button>
+</form>
+
+<h4>Folders </h4>
+<ul>
+    {{#each folder in model}}
+      <li>
+        <h3>{{folder.name}}</h3>
+        <h6>{{folder.id}}</h6>
+      </li>
+    {{/each}}
+</ul>
