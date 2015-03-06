@@ -1,0 +1,40 @@
+<table class="table">
+  <thead>
+    <tr>
+      <td>
+        From:
+      </td>
+      <td>
+        Subject
+      </td>
+      <td>
+        Folder
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each email in model}}
+    <tr>
+      <td>
+        {{email.from}}
+      </td>
+      <td>
+       <a {{action 'toggleDetails' email.id}}> {{email.subject}} </a>
+     </td>
+      <td>
+        {{email.folder.name}}
+      </td>
+    </tr>
+    {{#if detailsShow}}
+      <tr>
+        <td colspan="2">
+          <div class="emailBody">
+            <h4>To: {{email.to}}</h4>
+            {{email.body}}
+          </div>
+        </td>
+      </tr>
+    {{/if}}
+  {{/each}}
+  </tbody>
+</table>

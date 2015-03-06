@@ -7,14 +7,19 @@
   <div class="row">
     <div class="col-xs-8">
       <ul class="list-inline">
-        <lh>Folders:</lh>
-          {{#each folder in model}}
-            <li>
-              {{#link-to 'folder' folder.id}}
-                {{folder.name}}
-              {{/link-to}},
-            </li>
-          {{/each}}
+        <lh>Folders</lh>
+        <li>
+          {{#link-to 'emails'}}
+            All emails
+          {{/link-to}},
+        </li>
+        {{#each folder in model}}
+          <li>
+            {{#link-to 'folder' folder.id}}
+              {{folder.name}},
+            {{/link-to}}
+          </li>
+        {{/each}}
       </ul>
     </div>
     <div class="col-xs-4">
