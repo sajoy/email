@@ -1,3 +1,8 @@
 EmailEtc.FolderController = Ember.ObjectController.extend({
-  test: "hello"
+  detailsShow: false,
+  actions: {
+    toggleDetails: function() {
+      this.set('detailsShow', !this.detailsShow);
+    }
+  }
 });

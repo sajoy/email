@@ -1,8 +1,34 @@
 {{name}}
 
-{{#each email in emails}}
-  {{email.to}}
-  {{email.from}}
-  {{email.subject}}
-  {{email.body}}
-{{/each}}
+<table class="table">
+<tr>
+  <td>
+    From:
+  </td>
+  <td>
+    Subject
+  </td>
+</tr>
+  {{#each email in emails}}
+  <tr>
+    <td>
+      {{email.from}}
+    </td>
+    <td>
+     <a {{action 'toggleDetails' email.id}}> {{email.subject}} </a>
+    </td>
+  </tr>
+
+  {{#if detailsShow}}
+    <tr>
+      <td colspan="2">
+        <div class="emailBody">
+          {{email.body}}
+        </div>
+      </td>
+    </tr>
+  {{/if}}
+
+
+  {{/each}}
+</table>
