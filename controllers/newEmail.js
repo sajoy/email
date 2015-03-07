@@ -11,9 +11,11 @@ EmailEtc.NewEmailController = Ember.Controller.extend({
 
       EmailEtc.Folder.store.find('folder', 2).then(function(result){
         result.get('emails').pushObject(newEmail);
-        result.save();
+        result.save().then(function(result) {
+          newEmail.set('folder', result);
+          newEmail.save();
+        })
       });
-
 
       this.set('to', "");
       this.set('from', "");
