@@ -13,6 +13,7 @@ Bugs:
 ---
 * cannot actually send or rcv emails
 * emails cannot be opened individually in folder view
+* cannot move emails from one folder to another
 
 created by Sarah Joy Calpo
 MIT COPYRIGHT 2015
