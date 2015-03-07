@@ -1,3 +1,4 @@
+<h1>All</h1>
 <table class="table">
   <thead>
     <tr>
@@ -13,24 +14,24 @@
     </tr>
   </thead>
   <tbody>
-    {{#each email in model}}
+    {{#each}}
     <tr>
       <td>
-        {{email.from}}
+        {{from}}
       </td>
       <td>
-       <a {{action 'toggleDetails' email.id}}> {{email.subject}} </a>
+       <a {{action 'toggleDetails'}}> {{subject}} </a>
      </td>
       <td>
-        {{email.folder.name}}
+        {{folder.name}}
       </td>
     </tr>
     {{#if detailsShow}}
       <tr>
         <td colspan="2">
           <div class="emailBody">
-            <h4>To: {{email.to}}</h4>
-            {{email.body}}
+            <h4>To: {{to}}</h4>
+            {{body}}
           </div>
         </td>
       </tr>
